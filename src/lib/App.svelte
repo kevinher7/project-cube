@@ -6,7 +6,7 @@
 	import { getScene, initScene } from "./scene";
 	import { initRenderer, rendererStartAnimationLoop } from "./renderer";
 	import { createCube } from "./cube";
-
+	import { createRubickCube } from "./rubickCube";
 	let canvasRender;
 
 	onMount(() => {
@@ -16,8 +16,10 @@
 		initRenderer(canvasRender);
 		initControls();
 
-		const cube = createCube();
-		getScene().add(cube);
+		// const cube = createCube();
+		// cube.position.set(5, 0, 0);
+		createRubickCube(getScene());
+		// getScene().add(cube);
 
 		rendererStartAnimationLoop();
 	});

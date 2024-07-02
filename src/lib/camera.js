@@ -12,7 +12,9 @@ export const initCamera = () => {
 		1000
 	);
 
-	camera.position.z = 5;
+	camera.position.x = 15;
+	camera.position.y = 15;
+	camera.position.z = 15;
 };
 
 export const getCamera = () => {
