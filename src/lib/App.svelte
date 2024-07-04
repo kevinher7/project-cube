@@ -1,12 +1,15 @@
 <script>
 	import { onMount } from "svelte";
-	import { initControls } from "./controls";
-	import { initCamera } from "./camera";
-	import { initLight } from "./lights";
-	import { getScene, initScene } from "./scene";
-	import { initRenderer, rendererStartAnimationLoop } from "./renderer";
-	import { createCube } from "./cube";
-	import { createRubickCube } from "./rubickCube";
+	import { initControls } from "./RenderSystem/controls";
+	import { initCamera } from "./RenderSystem/camera";
+	import { initLight } from "./RenderSystem/lights";
+	import { getScene, initScene } from "./RenderSystem/scene";
+	import {
+		initRenderer,
+		rendererStartAnimationLoop,
+	} from "./RenderSystem/renderer";
+	import { getRaycaster } from "./RenderSystem/raycaster";
+	import { createRubickCube } from "./Objects/rubickCube";
 	let canvasRender;
 
 	onMount(() => {
@@ -16,10 +19,7 @@
 		initRenderer(canvasRender);
 		initControls();
 
-		// const cube = createCube();
-		// cube.position.set(5, 0, 0);
 		createRubickCube(getScene());
-		// getScene().add(cube);
 
 		rendererStartAnimationLoop();
 	});

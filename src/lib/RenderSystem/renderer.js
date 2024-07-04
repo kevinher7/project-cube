@@ -26,12 +26,6 @@ export const rendererStartAnimationLoop = () => {
 	renderer.setAnimationLoop(animate);
 };
 
-// const animate = () => {
-// 	requestAnimationFrame(animate);
-// 	getControls().update();
-// 	renderer.render(getScene(), getCamera());
-// };
-
 const animate = () => {
 	requestAnimationFrame(animate);
 	const controls = getControls();
@@ -46,4 +40,6 @@ const animate = () => {
 	} else {
 		console.error("Missing scene, camera, or renderer");
 	}
+
+	return 0;
 };

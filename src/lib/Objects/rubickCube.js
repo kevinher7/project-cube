@@ -2,18 +2,6 @@
 
 import { createCube } from "./cube";
 
-// My original idea was to store the cube meshes on an array
-// and then modify them but maybe I should implement Raycasters
-
-// let rubickCubeTiles = {};
-
-// const createRubickCubeTiles = () => {
-// 	// Can change the color for each tile later or smt
-// 	for (let index = 1; index <= 26; index++) {
-// 		rubickCubeTiles[`cube${index}`] = createCube();
-// 	}
-// };
-
 export const createRubickCube = (sceneObj) => {
 	let tmpCube;
 
